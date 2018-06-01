@@ -1,4 +1,5 @@
 import smtplib
+#I know I should import it as "import tkinter as tk" but I will work on that next.
 from tkinter import *
 # Establishing connection with gmail server
 server = smtplib.SMTP( "smtp.gmail.com", 587)
