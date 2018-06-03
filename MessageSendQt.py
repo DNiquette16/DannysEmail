@@ -69,9 +69,6 @@ class Window(QMainWindow):
 		server.sendmail(Sender, [Recipient], EmailBody)
 		server.quit()
 
-
-
-
 App = QApplication(sys.argv)
 
 window = Window()
