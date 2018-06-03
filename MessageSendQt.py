@@ -64,7 +64,7 @@ class Window(QMainWindow):
 		server.ehlo()
 		server.starttls()
 		server.ehlo()
-		server.login(Sender, "Nighthawk16")
+		server.login(Sender, "----------")
 		EmailBody = "Subject: {}\n\n{}".format(SubjectLine, self.Body.toPlainText())
 		server.sendmail(Sender, [Recipient], EmailBody)
 		server.quit()
