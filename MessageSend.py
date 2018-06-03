@@ -6,7 +6,7 @@ server = smtplib.SMTP( "smtp.gmail.com", 587)
 server.starttls()
 server.ehlo()
 #Sending login info to connect
-server.login( "bigdniquette@gmail.com", "Nighthawk16" )
+server.login( "bigdniquette@gmail.com", "---------" )
 #GUI class 
 class Email(Tk):
 
