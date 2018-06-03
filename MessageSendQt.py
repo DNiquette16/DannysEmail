@@ -19,6 +19,7 @@ class Window(QMainWindow):
 	def InitWindow(self):
 		self.setWindowTitle(self.title)
 		self.setGeometry(self.top, self.left, self.width, self.height)
+		
 		button = QPushButton('Push this button', self)
 		button.move(80, 500)
 		button.setFixedWidth(130)
@@ -35,6 +36,10 @@ class Window(QMainWindow):
 		self.Subject = QLineEdit(self)
 		self.Subject.move(80, 70)
 		self.Subject.resize(500, 20)
+		
+		self.Body = QPlainTextEdit(self)
+		self.Body.move(80, 100)
+		self.Body.resize(500, 350)
 
 		FromLabel = QLabel(self)
 		FromLabel.setText("From:")
@@ -47,11 +52,7 @@ class Window(QMainWindow):
 		SubjectLabel = QLabel(self)
 		SubjectLabel.setText("Subject:")
 		SubjectLabel.move(15, 63)
-
-		self.Body = QPlainTextEdit(self)
-		self.Body.move(80, 100)
-		self.Body.resize(500, 350)
-
+		
 		self.show()
 
 	def send_click(self):
