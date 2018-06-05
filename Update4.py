@@ -70,14 +70,16 @@ class Window(QMainWindow):
 		self.show()
 
 	def attachStuff(self):
-		
+		#Open up file dialog box so the user can choose their image
 		name = QFileDialog.getOpenFileName(self, "Open file")
 		#img_name = name[0].split('/')[4]
 		img_name = name[0]
 		print(name[0])
+		#format and attach the image to the message
 		img_data = open(img_name, 'rb').read()
 		self.image = MIMEImage(img_data, name=os.path.basename(name[0].split('/')[4]))
 		self.mail.attach(self.image)
+		#SHow message saying image has been attached
 		AttachedLabel = QLabel(self)
 		AttachedLabel.move(350, 445)
 		AttachedLabel.setText("Image attached.")
@@ -95,14 +97,14 @@ class Window(QMainWindow):
 			self.server = smtplib.SMTP( "smtp.aol.com", 465)
 		elif self.email== "yahoo":
 			self.server = smtplib.SMTP( "smtp.mail.yahoo.com", 587)
-		#finish sending email after we know which provider it is
-
+		
+		#Format body and crucial info about email
 		EmailBody = MIMEText(self.Body.toPlainText())
 		self.mail['Subject'] = SubjectLine
 		self.mail['From'] =  self.Uname
 		self.mail['To'] = Recipient
 		self.mail.attach(EmailBody)
-
+		#finish sending email after we know which provider it is
 		self.server.ehlo()
 		self.server.starttls()
 		self.server.ehlo()
