@@ -6,3 +6,5 @@ Update 1: I rewrote the GUI using PyQt instead of TKinter after researching that
 Update 2: I added a feature to save drafts to a text file on your desktop. 
 
 Update 3: Previously, I had hardcoded my email login info into the code but that was not portable so I added a login page that it opens to. If your login does not authenticate, you will get an error message and it will ask to reinput info. Also I added a "Show password" checkbox that you can check or uncheck, but it wil hide or show your password.
+
+Update 4: I recently added an image attachment button that brings up a file choosing window, once you find the file, you choose it and it will attach that file to the email.
