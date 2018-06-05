@@ -42,7 +42,7 @@ class Email(Tk):
 		#quit server use
 		server.quit()
 
-	
+
 root = Tk()
 email_gui = Email(root)
 root.mainloop()
