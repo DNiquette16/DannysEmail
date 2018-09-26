@@ -1,5 +1,5 @@
 # DannysEmail
-I was trying to get some experience with GUI's so I decided to work on an email editor that I could send emails from.
+I was trying to get some experience with GUI's so I decided to work on an email client that I could send emails from.
 
 Update 1: I rewrote the GUI using PyQt instead of TKinter after researching that TKinter is not the best GUI toolkit.
 
